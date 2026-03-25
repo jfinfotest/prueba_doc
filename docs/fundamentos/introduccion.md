@@ -4,7 +4,7 @@ category: "Fundamentos"
 order: 1
 categoryOrder: 1
 author: "midudev"
-date: "2026-03-24"
+date: "2026-03-25"
 ---
 
 # Bienvenido a Fusiondoc
