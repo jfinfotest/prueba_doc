@@ -7,7 +7,7 @@ author: "midudev"
 date: "2026-03-25"
 ---
 
-# Bienvenido a Fusiondoc JF
+# Bienvenido a Fusiondoc JFV2
 
 Este es el primer archivo de tu nueva documentación generada estáticamente, hosteada en GitHub. 
 
