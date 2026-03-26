@@ -1,12 +1,11 @@
 ---
 title: Pasos Personalizados
-category: Componentes
 description: Aprende a crear guías paso a paso interactivas con componentes anidados.
 ---
 
 # Guía de Instalación Avanzada
 
-En esta sección veremos cómo utilizar el componente `::::::steps` para crear flujos de trabajo claros, permitiendo anidar otros componentes como la terminal o bloques de código.
+En esta sección veremos cómo utilizar el componente para crear flujos de trabajo claros.
 
 ::::::steps
 
@@ -22,18 +21,21 @@ Si no tienes una versión reciente, por favor actualízala antes de continuar.
 Crea un archivo `.env` en la raíz de tu proyecto. Puedes elegir entre diferentes entornos usando las pestañas a continuación:
 
 ::::tabs
+
 :::tab{title="Desarrollo" icon="mdi:dev-to"}
 ```env
 NEXT_PUBLIC_API_URL=http://localhost:3000
 DEBUG=true
 ```
 :::
+
 :::tab{title="Producción" icon="mdi:rocket"}
 ```env
 NEXT_PUBLIC_API_URL=https://api.tuproyecto.com
 DEBUG=false
 ```
 :::
+
 ::::
 
 :::::
