@@ -39,7 +39,7 @@ Cuando quieras documentar instalaciones complejas, usa la directiva contenedora 
 
 ::::tabs
 
-:::tab{title="npm" value="npm"}
+:::tab{title="npm" value="npm" icon="logos:npm-icon"}
 ```bash title="Instalación vía NPM" {1,4} showLineNumbers
 # Instalar dependencias base
 npm install react react-dom next
@@ -49,7 +49,7 @@ npm install -D tailwindcss postcss autoprefixer
 ```
 :::
 
-:::tab{title="yarn" value="yarn"}
+:::tab{title="yarn" value="yarn" icon="logos:yarn"}
 ```bash title="Instalación vía Yarn" {1,4} showLineNumbers
 # Instalar dependencias base
 yarn add react react-dom next
@@ -59,7 +59,7 @@ yarn add -D tailwindcss postcss autoprefixer
 ```
 :::
 
-:::tab{title="pnpm" value="pnpm"}
+:::tab{title="pnpm" value="pnpm" icon="logos:pnpm"}
 ```bash title="Instalación vía PNPM" {1,4} showLineNumbers
 # Instalar dependencias base
 pnpm add react react-dom next
@@ -79,7 +79,7 @@ Aprovecha el resaltado semántico impulsado por el motor interno (VS Code themes
 
 ::::tabs
 
-:::tab{title="Python" value="py"}
+:::tab{title="Python" value="py" icon="logos:python"}
 ```python title="api/routes.py" {3,5} showLineNumbers
 from fastapi import FastAPI
 
@@ -91,7 +91,7 @@ def read_root():
 ```
 :::
 
-:::tab{title="Go" value="go"}
+:::tab{title="Go" value="go" icon="logos:go"}
 ```go title="main.go" {5,8-9} showLineNumbers
 package main
 
@@ -105,7 +105,7 @@ func main() {
 ```
 :::
 
-:::tab{title="Rust" value="rs"}
+:::tab{title="Rust" value="rs" icon="logos:rust"}
 ```rust title="src/main.rs" {2,5} showLineNumbers
 fn greet(name: &str) {
     println!("Resaltando esta línea en Rust para {}", name);
@@ -117,7 +117,7 @@ fn main() {
 ```
 :::
 
-:::tab{title="CSS" value="css"}
+:::tab{title="CSS" value="css" icon="vscode-icons:file-type-css"}
 ```css title="styles/globals.css" {2,7} showLineNumbers
 @layer utilities {
   .text-balance {
