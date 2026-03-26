@@ -23,6 +23,13 @@ Como puedes ver en el **Frontmatter** de arriba, hemos personalizado nuevas prop
 2. Todo vive en Git, lo que significa control de versiones gratuito.
 3. Se compila súper rápido con Next.js App Router y Tailwind.
 
+## Guía Rápida de Instalación
+
+Puedes ver el proceso de instalación en acción aquí mismo:
+
+:::terminal{title="PowerShell" staticText="Iniciando instalación de Fusiondoc..." commands="npm install @fusiondoc/core\nnpm run setup\nnpm run dev"}
+:::
+
 ## Componentes de UI Automáticos
 
 Al usar React Markdown y Tailwind Typography, todos tus elementos se estilizan sin configuración extra.
