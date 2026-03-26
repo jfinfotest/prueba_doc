@@ -5,13 +5,13 @@ description: Demostración de bloques de código avanzados y funcionalidad de pe
 
 # Ejemplos de Código
 
-En esta página demostraremos las nuevas funciones avanzadas de los bloques de código: control de zoom, modo pantalla completa, numeración de líneas que se puede encender y apagar, y pestañas de código perfectas.
+En esta página demostraremos las nuevas funciones avanzadas de los bloques de código: control de zoom, modo pantalla completa, numeración de líneas que se puede encender y apagar, nombres de archivo interactivos y pestañas de código perfectas (incluso en Modo Claro).
 
-## Bloque de Código con Numeración Resaltado
+## Bloque de Código con Nombre de Archivo
 
-Aquí hay un bloque de código estándar que muestra las características. Puedes encender la configuración de numeración de líneas o resaltar código específico:
+Aquí hay un bloque de código estándar que muestra el nombre del archivo en la cabecera. Solo agrega `title="tu_archivo.ext"` a tu markdown:
 
-```ts {2,6} showLineNumbers
+```ts title="src/utils/math.ts" {2,6} showLineNumbers
 // src/utils/math.ts
 export function sumar(a: number, b: number): number {
   return a + b;
@@ -27,21 +27,21 @@ Gracias a `remark-directive`, ahora podemos escribir pestañas nativas sin ensuc
 ::::tabs
 
 :::tab{title="npm" value="npm"}
-```bash showLineNumbers
+```bash title="Terminal" showLineNumbers
 npm install react react-dom
 npm run dev
 ```
 :::
 
 :::tab{title="yarn" value="yarn"}
-```bash showLineNumbers
+```bash title="Terminal" showLineNumbers
 yarn add react react-dom
 yarn dev
 ```
 :::
 
 :::tab{title="pnpm" value="pnpm"}
-```bash showLineNumbers
+```bash title="Terminal" showLineNumbers
 pnpm add react react-dom
 pnpm dev
 ```
@@ -54,7 +54,7 @@ pnpm dev
 ::::tabs
 
 :::tab{title="Python" value="py"}
-```python showLineNumbers
+```python title="main.py" showLineNumbers
 def greet(name: str):
     print(f"Hello, {name}!")
 
@@ -63,7 +63,7 @@ greet("World")
 :::
 
 :::tab{title="JavaScript" value="js"}
-```javascript showLineNumbers
+```javascript title="app.js" showLineNumbers
 function greet(name) {
   console.log(`Hello, ${name}!`);
 }
@@ -73,7 +73,7 @@ greet("World");
 :::
 
 :::tab{title="Rust" value="rs"}
-```rust showLineNumbers
+```rust title="src/main.rs" showLineNumbers
 fn greet(name: &str) {
     println!("Hello, {}!", name);
 }
