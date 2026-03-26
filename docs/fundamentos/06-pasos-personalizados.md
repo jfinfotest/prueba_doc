@@ -1,32 +1,50 @@
 ---
 title: Pasos Personalizados
-description: Aprende a usar el componente de pasos para tus guías.
+description: Aprende a crear guías paso a paso interactivas con componentes anidados.
 ---
 
-# Guía Paso a Paso
+# Guía de Instalación Avanzada
 
-Aquí tienes un ejemplo de cómo usar el componente `steps` con componentes anidados.
+En esta sección veremos cómo utilizar el nuevo componente `:::steps` para crear flujos de trabajo claros, permitiendo anidar otros componentes como la terminal o bloques de código.
 
 :::steps
-:::step{title="Primer Paso: Instalación"}
-Lo primero que debes hacer es instalar las dependencias necesarias:
 
-:::terminal{shell="bash" commands="npm install fusiondoc-utils\nnpm install framer-motion"}
+:::step{title="Preparar el entorno"}
+Primero, asegúrate de tener todas las dependencias instaladas en tu sistema. Puedes verificar tu versión de Node.js con el siguiente comando:
+
+:::terminal{shell="bash" commands="node --version"}
 :::
+
+Si no tienes una versión reciente, por favor actualízala antes de continuar.
 :::
 
-:::step{title="Segundo Paso: Configuración"}
-Configura tu archivo `fusion.config.js`:
+:::step{title="Configurar variables de entorno"}
+Crea un archivo `.env` en la raíz de tu proyecto. Puedes elegir entre diferentes entornos usando las pestañas a continuación:
 
-```javascript
-module.exports = {
-  theme: 'dark',
-  plugins: ['steps', 'terminal']
-}
+:::tabs
+:::tab{label="Desarrollo" icon="mdi:dev-to"}
+```env
+NEXT_PUBLIC_API_URL=http://localhost:3000
+DEBUG=true
 ```
 :::
-
-:::step{title="Tercer Paso: ¡Listo!"}
-Ya puedes empezar a usar los componentes en tus archivos Markdown.
+:::tab{label="Producción" icon="mdi:rocket"}
+```env
+NEXT_PUBLIC_API_URL=https://api.tuproyecto.com
+DEBUG=false
+```
 :::
+:::
+
+:::
+
+:::step{title="Ejecutar la aplicación"}
+Finalmente, inicia el servidor de desarrollo y abre tu navegador en `http://localhost:3000`.
+
+:::terminal{shell="bash" commands="npm run dev"}
+:::
+
+¡Listo! Ya tienes tu entorno configurado y funcionando.
+:::
+
 :::
