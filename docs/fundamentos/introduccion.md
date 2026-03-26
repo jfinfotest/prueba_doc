@@ -9,45 +9,29 @@ date: "2026-03-25"
 
 # Bienvenido a Fusiondoc JFV3
 
-Este es el primer archivo de tu nueva documentación generada estáticamente, hosteada en GitHub. 
+Este es el primer paso para dominar tu nueva documentación generada estáticamente, hosteada en GitHub. 
 
-## ¿Por qué Fusiondoc?
-Como puedes ver en el **Frontmatter** de arriba, hemos personalizado nuevas propiedades:
-- `title`: El título de la página
+---
+
+## ¿Qué hace a Fusiondoc diferente?
+
+Como puedes ver en el **Frontmatter** de arriba, hemos personalizado nuevas propiedades para cada página:
+- `title`: El título de la página.
 - `author`: El autor del post que se muestra debajo del título.
 - `date`: La fecha de publicación.
-- `draft`: Usado en otras páginas para ocultarlas si no están listas.
+- `order`: El orden en el que aparecerá en el Sidebar.
 
 ### Ventajas de usar Markdown puro
-1. No necesitas una base de datos.
-2. Todo vive en Git, lo que significa control de versiones gratuito.
-3. Se compila súper rápido con Next.js App Router y Tailwind.
 
-## Guía Rápida de Instalación
+No necesitas una base de datos pesada. Todo vive en Git, lo que significa control de versiones gratuito y una velocidad de carga extrema con **Next.js App Router** y **Tailwind**.
 
-Puedes ver el proceso de instalación en acción aquí mismo:
+---
 
-:::terminal{title="PowerShell" staticText="Iniciando instalación de Fusiondoc..." commands="npm install @fusiondoc/core\nnpm run setup\nnpm run dev"}
-:::
+## Próximos Pasos
 
-## Componentes de UI Automáticos
+Para continuar aprendiendo sobre las potentes capacidades de Fusiondoc, te recomendamos visitar:
 
-Al usar React Markdown y Tailwind Typography, todos tus elementos se estilizan sin configuración extra.
-
-### Bloques de Código
-
-Por ejemplo, un bloque de código en TypeScript:
-
-```typescript
-function saludar(nombre: string) {
-  return `Hola ${nombre}`;
-}
-```
-
-### Tablas
-
-| Característica | Soporte |
-| -------------- | ------- |
-| Modo Oscuro    | Sí      |
-| Frontmatter    | Sí      |
-| Búsqueda       | Próximamente |
+1. [Instalación Rápida](instalacion) - Configura tu entorno en segundos.
+2. [Pestañas con Iconos](04-tabs-con-iconos) - Agrupa tu código con iconos.
+3. [Terminal Animada](05-terminal-animada) - Simula procesos en tiempo real.
+4. [Ejemplos de Código](03-ejemplos-de-codigo) - Mira cómo se renderizan múltiples lenguajes de programación.
