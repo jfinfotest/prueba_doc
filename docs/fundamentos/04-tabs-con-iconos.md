@@ -7,71 +7,72 @@ categoryOrder: 2
 
 # Pestañas de Código (Code Tabs)
 
-El componente `:::tabs` te permite agrupar múltiples fragmentos de código o contenido en una interfaz de pestañas elegante y moderna.
+El componente `:::tabs` permite agrupar múltiples fragmentos de código o contenido interactivo en una interfaz de pestañas elegante y moderna.
 
 ---
 
 ## 🚀 Características
 
-- **Iconos Dinámicos:** Soporte para miles de iconos mediante la integración con **Iconify**.
-- **Diseño Premium:** Estética oscura optimizada para legibilidad de código.
-- **Interactividad Suave:** Cambios instantáneos y estados activos resaltados.
+- **Iconos Dinámicos:** Integración total con **Iconify**, permitiendo usar miles de iconos de diferentes sets (`mdi`, `logos`, `vscode-icons`, etc.).
+- **Diseño Premium:** Estética oscura con estados activos resaltados y transición suave entre pestañas.
+- **Soporte de Contenido Mixto:** Puedes incluir bloques de código, texto plano o incluso otros componentes como la **Terminal** dentro de una pestaña.
 
 ---
 
-## 📖 Uso Básico
+## 📖 Uso Avanzado
 
-Para crear un grupo de pestañas, usa la directiva de contenedor `::::tabs` (con 4 puntos) y envuelve cada pestaña en una directiva `:::tab`.
+### Atributos de Pestaña (`:::tab`)
 
-### Sintaxis en Markdown
+| Atributo | Descripción |
+| -------- | ----------- |
+| `title` | El texto que aparecerá en el botón de la pestaña. |
+| `icon` | (Opcional) El identificador del icono de Iconify (ej: `logos:npm-icon`). |
+| `value` | (Opcional) Un identificador único para la pestaña. Si se omite, se usa el título. |
+
+### Ejemplo: Contenido Mixto (Código + Terminal)
+
+A veces necesitas mostrar el código y luego cómo se ejecuta. Puedes hacerlo anidando una Terminal:
+
+::::tabs
+
+:::tab{title="Instalación" icon="logos:npm-icon"}
+```bash
+npm install fusiondoc
+```
+:::
+
+:::tab{title="Ejecución" icon="mdi:play-circle"}
+::terminal{shell="bash" commands="npm run start"}
+:::
+
+::::
+
+---
+
+## 🎨 Guía de Iconos
+
+Fusiondoc utiliza la librería **Iconify**, lo que te da acceso a más de 200,000 iconos. Algunos de los sets más recomendados son:
+
+| Set | Prefijo | Ejemplo |
+| --- | ------- | ------- |
+| **Material Design Icons** | `mdi:` | `mdi:github`, `mdi:react` |
+| **Programming Logos** | `logos:` | `logos:typescript-icon`, `logos:python` |
+| **VS Code Icons** | `vscode-icons:` | `vscode-icons:file-type-js-official` |
+| **Simple Icons** | `simple-icons:` | `simple-icons:tailwindcss` |
+
+> [!TIP]
+> Puedes buscar cualquier icono en [icon-sets.iconify.design](https://icon-sets.iconify.design/) y copiar su nombre para usarlo en el atributo `icon`.
+
+---
+
+## ⚠️ Reglas de Anidamiento
+
+Cuando anides componentes (ej: una Terminal dentro de una Pestaña), recuerda usar un número diferente de colones (`:`) para que el procesador MDX no se confunda:
 
 ```markdown
-::::tabs
-
-:::tab{title="npm" icon="logos:npm-icon"}
-`npm install`
-:::
-
-:::tab{title="yarn" icon="logos:yarn"}
-`yarn add`
-:::
-
+::::tabs (4 colones para el contenedor)
+  :::tab (3 colones para la pestaña)
+    ::terminal (2 colones para la terminal)
+  :::
 ::::
 ```
-
-### Ejemplo en Vivo
-
-::::tabs
-
-:::tab{title="npm" icon="logos:npm-icon"}
-```bash
-npm install fusiondoc-next
-```
-:::
-
-:::tab{title="yarn" icon="logos:yarn"}
-```bash
-yarn add fusiondoc-next
-```
-:::
-
-:::tab{title="pnpm" icon="logos:pnpm"}
-```bash
-pnpm add fusiondoc-next
-```
-:::
-
-::::
-
----
-
-## 🎨 Iconos Disponibles
-
-Puedes usar cualquier icono de los sets populares como:
-- `logos:typescript-icon`
-- `logos:python`
-- `logos:rust`
-- `mdi:github`
-- `vscode-icons:file-type-js-official`
-
-Busca más en: [icon-sets.iconify.design](https://icon-sets.iconify.design/)

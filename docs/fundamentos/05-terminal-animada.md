@@ -14,47 +14,52 @@ El componente `:::terminal` proporciona una consola visual interactiva que simul
 ## ✨ Características
 
 - **Animación de Digitación:** Simula que un usuario real está escribiendo los comandos.
+- **Soporte de Scroll Inteligente:** La animación se reinicia automáticamente cuando el componente entra en el campo de visión del usuario mientras navega.
 - **Múltiples Shells:** Soporte para `bash`, `powershell`, `cmd`, `node` y `python` con sus respectivos prompts e iconos.
-- **Botón de Reinicio:** Permite al usuario volver a ver la secuencia en cualquier momento.
-- **Feedback Visual:** Muestra un mensaje de éxito al finalizar la secuencia.
+- **Botón de Reinicio:** Un botón interactivo en la esquina superior derecha permite al usuario volver a ver la secuencia manualmente.
+- **Feedback Visual:** Muestra un mensaje de éxito (`PROCESS FINISHED`) al finalizar la secuencia.
 
 ---
 
-## 📖 Cómo configurarlo
-
-Se utiliza mediante la directiva `:::terminal` con los siguientes atributos:
+## 📖 Atributos
 
 | Atributo | Descripción |
 | -------- | ----------- |
 | `shell` | El tipo de terminal: `bash`, `zsh`, `powershell`, `cmd`, `node`, `python`. |
 | `title` | (Opcional) El nombre que aparece en la cabecera. Si se omite, se usa el nombre del shell. |
-| `staticText` | Un comentario o descripción que aparece fijo al inicio. |
-| `commands` | Los comandos a ejecutar, separados por `\\n` o saltos de línea. |
+| `staticText` | Un comentario o descripción que aparece fijo al inicio (ej: versión de la herramienta). |
+| `commands` | Los comandos a ejecutar. Puedes usar una lista o un string con `\n`. |
 
-### Ejemplo de PowerShell
+---
 
-```markdown
-:::terminal{shell="powershell" staticText="Instalando dependencias de Windows..." commands="Set-ExecutionPolicy RemoteSigned\nnpm install"}
+## 🚀 Ejemplos de Shells
+
+### Bash (Linux/macOS)
+Ideal para comandos de sistema y git.
+
+:::terminal{shell="bash" staticText="git version 2.34.1" commands="git clone https://github.com/user/repo\ncd repo\nls -la"}
 :::
-```
 
-:::terminal{shell="powershell" staticText="Configurando entorno de desarrollo..." commands="Set-ExecutionPolicy Bypass -Scope Process\nGet-ChildItem -Path ./docs"}
+### PowerShell (Windows)
+Específico para administradores y usuarios de Windows.
+
+:::terminal{shell="powershell" title="Windows Setup" staticText="Windows 11 Home Edition" commands="Set-ExecutionPolicy RemoteSigned\nGet-Service | Where-Object {$_.Status -eq 'Running'}"}
 :::
 
-### Ejemplo de Python REPL
+### Node.js REPL
+Para demostrar lógica de JavaScript en el servidor.
 
-```markdown
-:::terminal{shell="python" title="Python Interpreter" staticText="Probando lógica..." commands="print('Hola Mundo')\n[x * 2 for x in range(5)]"}
+:::terminal{shell="node" staticText="Welcome to Node.js v20.11.0" commands="const greeting = 'Hola Fusiondoc';\nconsole.log(greeting.toUpperCase());\n3 * (10 + 5)"}
 :::
-```
 
-:::terminal{shell="python" title="Python Interpreter" staticText="Debug de variables..." commands="import os\nos.name\nprint('Finalizado')"}
+### Python REPL
+Perfecto para demostraciones de ciencia de datos o scripting.
+
+:::terminal{shell="python" title="Python Interpreter" staticText="Python 3.12.0 (main, Oct 2 2023)" commands="import math\nmath.sqrt(144)\n[x for x in range(3)]"}
 :::
 
 ---
 
-## 💡 Casos de Uso
+## 💡 Comportamiento de Animación
 
-1. **Guías Multiplataforma:** Muestra comandos específicos para Windows (PowerShell) o Linux (Bash).
-2. **Tutoriales de Lenguaje:** Simula el uso de consolas interactivas de Node.js o Python.
-3. **Instalación de CLI:** Visualizar procesos complejos de configuración.
+El componente detecta automáticamente cuándo el contenido es visible. Si el usuario hace scroll hacia abajo y luego vuelve a subir, el componente notará que ha vuelto a entrar en el viewport y **reiniciará la escritura**, asegurando que el usuario nunca se pierda la demostración.
