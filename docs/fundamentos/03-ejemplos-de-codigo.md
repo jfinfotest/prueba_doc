@@ -25,24 +25,34 @@ console.log(sumar(5, 10)); // Output: 15
 Es muy común querer mostrar el mismo código o comandos en diferentes contextos, como administradores de paquetes o diferentes lenguajes.
 
 <tabs>
-  <tab title="npm" value="npm">
-  ```bash
-  npm install react react-dom
-  npm run dev
-  ```
-  </tab>
-  <tab title="yarn" value="yarn">
-  ```bash
-  yarn add react react-dom
-  yarn dev
-  ```
-  </tab>
-  <tab title="pnpm" value="pnpm">
-  ```bash
-  pnpm add react react-dom
-  pnpm dev
-  ```
-  </tab>
+
+<tab title="npm" value="npm">
+
+```bash
+npm install react react-dom
+npm run dev
+```
+
+</tab>
+
+<tab title="yarn" value="yarn">
+
+```bash
+yarn add react react-dom
+yarn dev
+```
+
+</tab>
+
+<tab title="pnpm" value="pnpm">
+
+```bash
+pnpm add react react-dom
+pnpm dev
+```
+
+</tab>
+
 </tabs>
 
 ### Diferentes Lenguajes
@@ -50,34 +60,44 @@ Es muy común querer mostrar el mismo código o comandos en diferentes contextos
 También podemos usarlo para mostrar implementaciones en diferentes lenguajes:
 
 <tabs>
-  <tab title="Python" value="py">
-  ```python
-  def greet(name: str):
-      print(f"Hello, {name}!")
 
-  greet("World")
-  ```
-  </tab>
-  <tab title="JavaScript" value="js">
-  ```javascript
-  function greet(name) {
-    console.log(`Hello, ${name}!`);
-  }
+<tab title="Python" value="py">
 
-  greet("World");
-  ```
-  </tab>
-  <tab title="Rust" value="rs">
-  ```rust
-  fn greet(name: &str) {
-      println!("Hello, {}!", name);
-  }
+```python
+def greet(name: str):
+    print(f"Hello, {name}!")
 
-  fn main() {
-      greet("World");
-  }
-  ```
-  </tab>
+greet("World")
+```
+
+</tab>
+
+<tab title="JavaScript" value="js">
+
+```javascript
+function greet(name) {
+  console.log(`Hello, ${name}!`);
+}
+
+greet("World");
+```
+
+</tab>
+
+<tab title="Rust" value="rs">
+
+```rust
+fn greet(name: &str) {
+    println!("Hello, {}!", name);
+}
+
+fn main() {
+    greet("World");
+}
+```
+
+</tab>
+
 </tabs>
 
 ## Características Adicionales
