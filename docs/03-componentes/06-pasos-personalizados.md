@@ -36,6 +36,48 @@ Para que el motor de Fusiondoc pueda procesar correctamente componentes uno dent
 
 Aquí tienes un ejemplo que combina todas las funcionalidades en un solo flujo:
 
+````markdown title="Sintaxis de orquestación"
+::::::steps
+
+:::::step{title="1. Iniciando el proyecto"}
+Primero, clonamos el repositorio y entramos en la carpeta:
+
+::terminal{shell="bash" commands="git clone https://github.com/fusiondoc/next-starter\ncd next-starter"}
+:::::
+
+:::::step{title="2. Instalación de dependencias"}
+Selecciona tu gestor de paquetes favorito:
+
+::::tabs
+
+:::tab{title="npm" icon="logos:npm-icon"}
+```bash
+npm install
+```
+:::
+
+:::tab{title="pnpm" icon="logos:pnpm"}
+```bash
+pnpm install
+```
+:::
+
+::::
+
+:::::
+
+:::::step{title="3. Verificación"}
+Verifica que todo funciona correctamente:
+
+::terminal{shell="bash" commands="npm run dev"}
+
+> [!NOTE]
+> Si la terminal no arranca, revisa tu versión de Node.js.
+:::::
+
+::::::
+````
+
 ::::::steps
 
 :::::step{title="1. Iniciando el proyecto"}

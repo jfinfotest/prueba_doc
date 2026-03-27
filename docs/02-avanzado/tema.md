@@ -3,6 +3,7 @@ title: "Personalizando el Tema"
 category: "Avanzado"
 order: 1
 categoryOrder: 2
+topicOrder: 1
 ---
 
 # Configuración Avanzada

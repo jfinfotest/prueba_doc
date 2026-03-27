@@ -37,11 +37,21 @@ El componente `:::terminal` proporciona una consola visual interactiva que simul
 ### Bash (Linux/macOS)
 Ideal para comandos de sistema y git.
 
+````markdown title="Sintaxis Bash"
+:::terminal{shell="bash" staticText="git version 2.34.1" commands="git clone https://github.com/fusiondoc/repo\ncd repo\nls -la"}
+:::
+````
+
 :::terminal{shell="bash" staticText="git version 2.34.1" commands="git clone https://github.com/user/repo\ncd repo\nls -la"}
 :::
 
 ### PowerShell (Windows)
 Específico para administradores y usuarios de Windows.
+
+````markdown title="Sintaxis PowerShell"
+:::terminal{shell="powershell" title="Windows Setup" staticText="Windows 11 Home Edition" commands="Set-ExecutionPolicy RemoteSigned\nGet-Service | Where-Object {$_.Status -eq 'Running'}"}
+:::
+````
 
 :::terminal{shell="powershell" title="Windows Setup" staticText="Windows 11 Home Edition" commands="Set-ExecutionPolicy RemoteSigned\nGet-Service | Where-Object {$_.Status -eq 'Running'}"}
 :::
@@ -49,11 +59,21 @@ Específico para administradores y usuarios de Windows.
 ### Node.js REPL
 Para demostrar lógica de JavaScript en el servidor.
 
+````markdown title="Sintaxis Node.js"
+:::terminal{shell="node" staticText="Welcome to Node.js v20.11.0" commands="const greeting = 'Hola Fusiondoc';\nconsole.log(greeting.toUpperCase());\n3 * (10 + 5)"}
+:::
+````
+
 :::terminal{shell="node" staticText="Welcome to Node.js v20.11.0" commands="const greeting = 'Hola Fusiondoc';\nconsole.log(greeting.toUpperCase());\n3 * (10 + 5)"}
 :::
 
 ### Python REPL
 Perfecto para demostraciones de ciencia de datos o scripting.
+
+````markdown title="Sintaxis Python"
+:::terminal{shell="python" title="Python Interpreter" staticText="Python 3.12.0 (main, Oct 2 2023)" commands="import math\nmath.sqrt(144)\n[x for x in range(3)]"}
+:::
+````
 
 :::terminal{shell="python" title="Python Interpreter" staticText="Python 3.12.0 (main, Oct 2 2023)" commands="import math\nmath.sqrt(144)\n[x for x in range(3)]"}
 :::
